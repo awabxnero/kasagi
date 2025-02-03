@@ -30,7 +30,7 @@ function processFile() {
         
         fs.writeFileSync('analysis_results.txt', results.join('\n'));
         
-        console.log('Analysis complete! Results have been saved to analysis_results.txt');
+        console.log('Analysis completed: analysis_results.txt');
         
     } catch (err) {
         console.error('Error reading file:', err);

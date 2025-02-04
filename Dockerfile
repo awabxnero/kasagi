@@ -1,9 +1,11 @@
-FROM node:14
+FROM node:lts
 
 WORKDIR /usr/src/app
 
-COPY output.txt ./
+VOLUME /user/src/app
+
+COPY challenge_a.js ./
 COPY challenge_b.js ./
 
-CMD ["node", "challenge_b.js"]
+CMD ["sh", "-c", "node challenge_a.js && node challenge_b.js"]
 

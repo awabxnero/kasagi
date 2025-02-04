@@ -1,5 +1,3 @@
-# Kasagi Challenge
-
 Live Demo:  https://sparkling-tiramisu-12d8f4.netlify.app/
 
 > challenge_a generates output.txt

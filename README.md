@@ -2,7 +2,9 @@
 
 > challenge_a generates output.txt
 >
-> challenge_b generates analysis_results.txt
+> challenge_b prints output of the analysis to the console
+>
+> The docker script write the cconsole output to analysis_results.txt
 
 
 ### Build the Docker Image

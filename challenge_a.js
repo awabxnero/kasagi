@@ -22,7 +22,7 @@ function generateInteger() {
 function generateFile() {
     const targetSize = 10 * 1000 * 1000
     let fileSize = 0;
-    const stream = fs.createWriteStream('output.txt');
+    const stream = fs.createWriteStream('output/output.txt');
 
     function generateRandomObject() {
         const choice = Math.floor(Math.random() * 4);
@@ -52,7 +52,7 @@ function generateFile() {
         const chunk = (fileSize > 0 ? ',' : '') + randomObject;
         
         if (fileSize + chunk.length > targetSize) {
-            stream.end(() => console.log('File generated: output.txt'));
+            stream.end(() => console.log('File generated: output/output.txt'));
             return;
         }
 

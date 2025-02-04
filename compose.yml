@@ -4,6 +4,7 @@ services:
       context: .
       dockerfile: Dockerfile
     volumes:
-      - .:/usr/src/app/
+      - ./output:/usr/src/app/output
+      - ./analysis_results:/usr/src/app/analysis_results
     restart: no
         

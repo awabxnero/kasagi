@@ -1,4 +1,4 @@
-Live Demo:  https://sparkling-tiramisu-12d8f4.netlify.app/
+### Live Demo:  https://sparkling-tiramisu-12d8f4.netlify.app/
 
 > challenge_a generates output.txt
 > challenge_b generates analysis_results.txt
@@ -12,12 +12,17 @@ docker build -t challenge-app .
 ```
 
 
-### Run the Application
+### Run the Application with logs (Long output, Might crash the terminal)
 
 
 ```bash
-docker run -v ".:/usr/src/app/" challenge-app
+docker run -v "./output:/usr/src/app/output" -v "./analysis_results:/usr/src/app/analysis_results" challenge-app
 ```
+> alternatively run the app without logs
+> ```bash
+>   docker run -v "./output:/usr/src/app/output" -v "./analysis_results:/usr/src/app/analysis_results" -d challenge-app
+> ```
+>
 
 ## Or
 
@@ -25,18 +30,13 @@ docker run -v ".:/usr/src/app/" challenge-app
 ### Using compose
 
 ```bash
-docker-compose up -d
+docker-compose up 
 ```
-
-### To view the logs (Long output, Might crash the terminal)
-
-```bash
-docker-compose logs -f
-````
-> alternatively run the app with logs
+> alternatively compose without logs
 > ```bash
->   docker-compose up
+>   docker-compose up -d
 > ```
 >
+
 
 

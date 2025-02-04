@@ -15,22 +15,16 @@ function determineType(trimmed) {
 
 function processFile() {
     try {
-        const data = fs.readFileSync('output.txt', 'utf-8');
+        const data = fs.readFileSync('output/output.txt', 'utf-8');
         const objects = data.split(',');
-        
-        const results = [];
         
         for (const obj of objects) {
             const trimmed = obj.trim(); 
             const type = determineType(trimmed);
-            const output = `${trimmed}: ${type}`;
-            console.log(output); 
-            results.push(output);
+            console.log(`${trimmed}: ${type}`);
         }
         
-        fs.writeFileSync('analysis_results.txt', results.join('\n'));
-        
-        console.log('Analysis completed: analysis_resultstxt');
+        console.log('Analysis completed: analysis_results/results.txt');
         
     } catch (err) {
         console.error('Error reading file:', err);

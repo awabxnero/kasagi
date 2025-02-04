@@ -4,7 +4,8 @@ Live Demo:  https://sparkling-tiramisu-12d8f4.netlify.app/
 
 > challenge_a generates output.txt
 > challenge_b generates analysis_results/results.txt
-> Note: I'm following the wording of challenge C strictly which implies that output of challenge A should be present in the directory and the docker container should only excute the script for challenge B.
+
+> I'm following the wording of challenge C strictly which implies that output of challenge A should be present in the directory and the docker container should only excute the script for challenge B.
 ## Using compose
 
 ```bash

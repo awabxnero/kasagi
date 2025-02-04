@@ -15,4 +15,3 @@ docker build -t challenge-app .
 docker run --rm -v "$(pwd):/usr/src/app" challenge-app
 ```
 
-s

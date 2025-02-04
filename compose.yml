@@ -1,0 +1,9 @@
+services: 
+  challenge-app: 
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./analysis_results:/usr/src/app/analysis_results
+    restart: no
+        

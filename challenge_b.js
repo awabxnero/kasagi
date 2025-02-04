@@ -28,9 +28,9 @@ function processFile() {
             results.push(output);
         }
         
-        fs.writeFileSync('analysis_results.txt', results.join('\n'));
+        fs.writeFileSync('analysis_results/results.txt', results.join('\n'));
         
-        console.log('Analysis completed: analysis_results.txt');
+        console.log('Analysis completed: analysis_results/results.txt');
         
     } catch (err) {
         console.error('Error reading file:', err);
